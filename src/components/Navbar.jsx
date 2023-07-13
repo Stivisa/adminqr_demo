@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { AiOutlineMenu, AiOutlineClose, AiFillTag } from "react-icons/ai";
 import {
-  BsFillCartFill,
-  BsFillPersonFill,
-  BsFillSaveFill,
-} from "react-icons/bs";
-import { FaUserFriends, FaWallet } from "react-icons/fa";
-import { MdHelp } from "react-icons/md";
+  AiOutlineMenu,
+  AiOutlineClose,
+  AiFillTag,
+  AiFillSetting,
+} from "react-icons/ai";
+import { BsFillCartFill, BsFillPersonFill } from "react-icons/bs";
+import { MdFastfood, MdCategory, MdTableRestaurant } from "react-icons/md";
 import { IoIosPeople } from "react-icons/io";
 
 const Navbar = () => {
@@ -39,9 +39,15 @@ const Navbar = () => {
         />
       </div>
       */}
-      {/* Cart button  */}
+      {/* Cart button  
       <button className="bg-black text-white hidden md:flex items-center py-2 rounded-full">
         <BsFillPersonFill size={20} className="mr-2" /> AdminName
+      </button>
+      */}
+      {/* Cart button  */}
+      <button className="bg-black text-white sm:flex items-center py-2 rounded-full">
+        <BsFillPersonFill size={20} className="mr-2" />{" "}
+        <span className="hidden sm:flex">AdminName</span>
       </button>
 
       {/* Mobile Menu */}
@@ -77,25 +83,25 @@ const Navbar = () => {
                 <BsFillCartFill size={25} className="mr-4" /> Orders{" "}
               </li>
             </Link>
-            <Link to="/customers" onClick={() => setNav(!nav)}>
+            <li className="text-xl py-4 flex">
+              <MdCategory size={25} className="mr-4" /> Categories
+            </li>
+            <li className="text-xl py-4 flex">
+              <MdFastfood size={25} className="mr-4" /> Products
+            </li>
+            <li className="text-xl py-4 flex">
+              <AiFillTag size={25} className="mr-4" /> Properties
+            </li>
+            <Link to="/users" onClick={() => setNav(!nav)}>
               <li className="text-xl py-4 flex">
-                <IoIosPeople size={25} className="mr-4" /> Customers
+                <IoIosPeople size={25} className="mr-4" /> Users
               </li>
             </Link>
             <li className="text-xl py-4 flex">
-              <FaWallet size={25} className="mr-4" /> Wallet
+              <MdTableRestaurant size={25} className="mr-4" /> Tables
             </li>
             <li className="text-xl py-4 flex">
-              <MdHelp size={25} className="mr-4" /> Help
-            </li>
-            <li className="text-xl py-4 flex">
-              <AiFillTag size={25} className="mr-4" /> Promotions
-            </li>
-            <li className="text-xl py-4 flex">
-              <BsFillSaveFill size={25} className="mr-4" /> Best Ones
-            </li>
-            <li className="text-xl py-4 flex">
-              <FaUserFriends size={25} className="mr-4" /> Invite Friends
+              <AiFillSetting size={25} className="mr-4" /> Settings
             </li>
           </ul>
         </nav>
