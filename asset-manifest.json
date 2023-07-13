@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/adminqr_demo/static/css/main.1a2d0669.css",
+    "main.js": "/adminqr_demo/static/js/main.01afa35d.js",
+    "index.html": "/adminqr_demo/index.html",
+    "main.1a2d0669.css.map": "/adminqr_demo/static/css/main.1a2d0669.css.map",
+    "main.01afa35d.js.map": "/adminqr_demo/static/js/main.01afa35d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a2d0669.css",
+    "static/js/main.01afa35d.js"
+  ]
+}
